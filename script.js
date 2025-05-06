@@ -1,11 +1,19 @@
-const sketchPad = document.querySelector("div")
+const sketchPad = document.querySelector("section")
 
-const createGrid = (grids) => {
+const createRow = (grids) => {
     for (let i=0; i<grids; i++) {
-        let grid = document.createElement("div");
-        grid.setAttribute("id", `grid-${i}`)
-        sketchPad.appendChild(grid)
+        const div = document.createElement("div");
+        div.setAttribute("class", "square");
+        div.style.width = `${100 / grids}%`
+        sketchPad.appendChild(div);
     }
 }
+
+const createGrid = (cols) => {
+    for (let i=0; i<cols; i++) {
+        createRow(cols);
+    }
+}
+
 
 createGrid(16);

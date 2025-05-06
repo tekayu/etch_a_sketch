@@ -1,8 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     color: red;
 }
 
 #sketch_pad {
-    background-color: aqua;
+    margin: 100px auto;
+    width: 50%;
+
     display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    border: 1px solid black;
+    aspect-ratio: 1 / 1;
+}
+
+.square:hover {
+    background-color: black;
 }
